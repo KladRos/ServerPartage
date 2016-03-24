@@ -1,0 +1,4 @@
+delete FROM departements WHERE  
+  not exists (
+  select numerodepartement from employes where employes.NUMERODEPARTEMENT = departements.NUMERODEPARTEMENT
+  );
